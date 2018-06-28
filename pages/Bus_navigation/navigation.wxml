@@ -1,0 +1,11 @@
+<!--pages/Bus_navigation/navigation.wxml-->
+<view class="flex-style">
+  <view class="flex-item" bindtouchstart="goToCar">驾车</view>
+  <view class="flex-item active" bindtouchstart="goToBus">公交</view>
+  
+</view>
+<view class="text_box" wx:for="{{transits}}" wx:for-item="i">
+  <text class="text_item" wx:for="{{i.transport}}" wx:for-item="j">
+    {{j}}
+  </text>
+</view>

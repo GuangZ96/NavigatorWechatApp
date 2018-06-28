@@ -1,0 +1,14 @@
+<!--pages/Car_navigation/navigation.wxml-->
+<view class="flex-style">
+  <view class="flex-item active" bindtouchstart='goToCar'>驾车</view>
+  <view class="flex-item" bindtouchstart='goToBus'>公交</view>
+</view>
+<view class="map_box">
+  <map id="navi_map" longitude='{{markers[0].longitude}}' latitude='{{markers[0].latitude}}' scale="12" markers="{{markers}}" polyline="{{polyline}}"></map>
+</view>
+
+<view class="text_box">
+  <view class="text">{{distance}}</view>
+  <view class="text">{{cost}}</view>
+  <view class="detail_button" bindtouchstart='goDetail'>路线</view>
+</view>

@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+<view class='section'>
+  <input data-city='{{city}}' data-longitude='{{longitude}}' data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder='搜地点、查公交站' focus='true'></input>
+</view>
+<view bindtouchstart="bindSearch" data-keywords="{{i.name}}" class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  {{i.name}}
+</view>
+<view class='map_container'>
+
+  <map class='map' id='map'
+  longitude='{{longitude}}' latitude='{{latitude}}'
+  scale='13' show-location='true' markers='{{markers}}'
+  bindmarkertap='markertap'>
+  <cover-view bindtap='navitap'>
+    <cover-image class='csize' src='/pngs/button.png'/>
+  </cover-view>
+  </map>
+</view>
+
+<view class="map_text">
+  <text class="h1" bindtap='navitoDetails'>{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+</view>

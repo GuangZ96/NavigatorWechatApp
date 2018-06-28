@@ -1,0 +1,8 @@
+<!--pages/poi_details/poi_details.wxml-->
+
+  <image src="{{imgs.imgurl}}" class="art-img"/>
+  <view class='map_text'>
+  <text class='h2'>\n\n{{name}}\n\n</text>
+  <text>{{addr}}\n\n</text>
+  <text>{{types}}\n\n</text>
+</view>

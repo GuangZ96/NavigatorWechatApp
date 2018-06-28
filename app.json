@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/Regeo/Regeo",
+    "pages/Car_navigation/navigation",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/inputs/inputs",
+    "pages/Car_navigation_detail/navigation",
+    "pages/poi_details/poi_details",
+    "pages/Bus_navigation/navigation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  }
+}

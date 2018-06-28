@@ -1,0 +1,16 @@
+<!--pages/Regeo/Regeo.wxml-->
+<view class='section'>
+  <input data-city='{{city}}' data-longitude='{{longitude}}' data-latitude="{{latitude}}" bindtouchstart="bindInput" placeholder='搜地点、查公交' focus='true'></input>
+</view>
+<view bindtouchstart="bindSearch" data-keywords="{{i.name}}" class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  {{i.name}}
+</view>
+  
+
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map> 
+</view>
+<view class="map_text">
+    <text class="h1">{{textData.name}}</text>
+    <text>{{textData.desc}}</text>
+</view>
